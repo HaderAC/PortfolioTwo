@@ -33,3 +33,5 @@ Must properly utilize Bootstrap components and grid system.
 
 Created a portfolio site with three pages that lonk to each other, I used mostly bootstrap elemts to create the page and added some css to edit out elemts some more. I was able to find some additional javascript code to allowme to have the buttons react to the features i was trying to display. Asthetically i prefer the minimalism of it. 
 
+https://haderac.github.io/PortfolioHW2/
+https://github.com/HaderAC/PortfolioHW2
