@@ -14,10 +14,9 @@
 </head>
 
 <body>
-
     <!--This is where the navigation bar starts-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./index.html">HADER CORTES</a>
+        <a class="navbar-brand" href="./index.html">HADER COR</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,33 +29,39 @@
         </div>
     </nav>
     <!--This is where the navigation bar ends-->
-    <section id="myBtnContainer">
+    <div id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
         <button class="btn" onclick="filterSelection('javascript')"> Javascript</button>
         <button class="btn" onclick="filterSelection('CSS')"> CSS</button>
         <button class="btn" onclick="filterSelection('Sites')"> Sites</button>
-    </section>
+    </div>
+
     <!-- Portfolio Gallery Grid -->
-    <main class="row">
+    <div class="row">
         <div class="column javascript">
             <div class="content">
                 <img src="https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg"
                     alt="javascript" style="width:100%">
                 <h4>javascript</h4>
+
             </div>
         </div>
+
         <div class="column javascript">
             <div class="content">
                 <img src="https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg"
                     alt="javascript" style="width:100%">
                 <h4>javascript</h4>
+
             </div>
         </div>
+
         <div class="column CSS">
             <div class="content">
                 <img src="https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg"
                     alt="CSS" style="width:100%">
                 <h4>CSS</h4>
+
             </div>
         </div>
         <div class="column javascript">
@@ -64,8 +69,11 @@
                 <img src="https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg"
                     alt="javascript" style="width:100%">
                 <h4>Javascript</h4>
+
             </div>
         </div>
+
+
         <div class="column Sites">
             <div class="content">
                 <img src="https://img.freepik.com/free-vector/coming-soon-message-illuminated-with-light-projector_1284-3622.jpg?size=338&ext=jpg"
@@ -74,19 +82,75 @@
 
             </div>
         </div>
-    </main>
+    </div>
+    </div>
 
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) {
+                    w3AddClass(x[i], "show");
+                }
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!-- Footer -->
     <footer class="page-footer font-small blue-grey lighten-5">
-        <section id="footerdiv">
+
+        <div id="footerdiv">
             <div class="container">
+
                 <!-- Grid row-->
                 <div class="row py-4 d-flex align-items-center">
+
                     <!-- Grid column -->
                     <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                         <h6 class="mb-0">Reachout to us! Don't be shy, check out our pages!</h6>
                     </div>
                     <!-- Grid column -->
+
+                    <!-- Grid column -->
                     <div class="col-md-6 col-lg-7 text-center text-md-right">
+
                         <!-- Facebook -->
                         <a class="fb-ic">
                             <i class="fab fa-facebook-f white-text mr-4"> </i>
@@ -107,11 +171,18 @@
                         <a class="ins-ic">
                             <i class="fab fa-instagram white-text"> </i>
                         </a>
+
                     </div>
+                    <!-- Grid column -->
+
                 </div>
+                <!-- Grid row-->
+
             </div>
-        </section>
-        <article class="container text-center text-md-left mt-5">
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
 
             <!-- Grid row -->
             <div class="row mt-3 dark-grey-text">
@@ -120,16 +191,20 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
 
                     <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold">HADER COR co.</h6>
+                    <h6 class="text-uppercase font-weight-bold">HADER CORTES co.</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>Our goal is to continue to grow and impliment inovative and stylish ways to bring your projects
                         to
                         fruition. Check out some of our work and see how we can work for you.</p>
 
                 </div>
+
                 <!-- Grid column -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+
                 </div>
+
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
@@ -154,6 +229,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
+                    <!-- Links -->
                     <h6 class="text-uppercase font-weight-bold">Contact</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
@@ -166,41 +242,17 @@
                         <i class="fas fa-print mr-3"></i> + 01 786 899 3520</p>
                 </div>
             </div>
-        </article>
+
+        </div>
+
+
         <!-- Copyright -->
         <div class="footer-copyright text-center text-black-50 py-3">© 2020 Copyright:
-            <a class="dark-grey-text" href="#"> HADER COR</a>
+            <a class="dark-grey-text" href="#"> HADER CORTES</a>
         </div>
         <!-- Copyright -->
 
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
