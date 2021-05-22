@@ -1,5 +1,5 @@
 .row {
-    margin: 10px -16px;
+    margin: 20px -26px;
   }
   
   /* Add padding BETWEEN each column */
@@ -25,7 +25,7 @@
   /* Content */
   .content {
     background-color: white;
-    padding: 10px;
+    padding: 20px;
   }
   
   /* The "show" class is added to the filtered elements */
@@ -47,8 +47,8 @@
   }
   
   .btn.active {
-    background-color: #666;
-    color: rgb(175, 170, 170);
+    background-color: rgb(185, 25, 25);
+    color: rgb(68, 36, 36);
   }.row {
     margin: 10px -16px;
   }
@@ -56,12 +56,12 @@
   /* Add padding BETWEEN each column */
   .row,
   .row > .column {
-    padding: 8px;
+    padding: 10px;
   }
   
   /* Create three equal columns that floats next to each other */
   .column {
-    float: left;
+    float: right;
     width: 33.33%;
     display: none; /* Hide all elements by default */
   }
