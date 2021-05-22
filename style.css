@@ -115,7 +115,7 @@
   }
   
   nav{
-    background-color: rgb(70, 68, 68);
+    background-color: rgb(228, 18, 18);
   }
   
   .fas{
@@ -126,8 +126,8 @@
     color: rgb(179, 174, 174);
   }
   
-  /* @media screen and (max-width: 760px;){
+  @media screen and (max-width: 760px;){
     body{
       background-color: aquamarine;
     }
-  } */
+  }
