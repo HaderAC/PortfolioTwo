@@ -94,7 +94,7 @@
   }
   
   .btn:hover {
-    background-color: #ddd;
+    background-color: red;
   }
   
   .btn.active {
@@ -126,8 +126,4 @@
     color: rgb(179, 174, 174);
   }
   
-  @media screen and (max-width: 760px;){
-    body{
-      background-color: aquamarine;
-    }
-  }
+  @media screen and (max-width: 760px;);
